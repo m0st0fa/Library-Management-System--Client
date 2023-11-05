@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "category": "Fantasy Novels",
+      "image": "https://i.ibb.co/7y4w1Xq/fanstay-Book.jpg"
+    },
+    {
+      "id": 2,
+      "category": "Science Fiction",
+      "image": "https://i.ibb.co/cvN3kWG/seii-fi.jpg"
+    },
+    {
+      "id": 3,
+      "category": "Horror",
+      "image": "https://i.ibb.co/W50HFD5/photo-2020-11-02-09-34-04.webp"
+    },
+    {
+      "id": 4,
+      "category": "Romantic-Fiction",
+      "image": "https://i.ibb.co/LpqSRrY/attachment-132938343.jpg"
+    }
+  ]
+  
