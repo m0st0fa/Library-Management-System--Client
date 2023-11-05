@@ -9,7 +9,7 @@ const HomeBookDetails = ({item}) => {
             <figure><img className="w-full h-80" src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <div className="card-actions">
-                    <Link to={`/category/${category}`} className="w-full">
+                    <Link to={`/books/${category}`} className="w-full">
                         <button className="btn w-full ">{category}</button>
                     </Link>
 
