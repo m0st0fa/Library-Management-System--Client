@@ -34,7 +34,7 @@ const AddBooks = () => {
     }
     return (
         <div className="bg-[#F4F3F0] p-20">
-            <h2 className="text-3xl text-green-500 font-bold">Add Product</h2>
+            <h2 className="text-3xl text-green-500 font-bold">Add Books</h2>
             <form onSubmit={handleAddBooks} >
                 {/* form name and author name row */}
                 <div className="  md:flex ">
@@ -102,7 +102,7 @@ const AddBooks = () => {
                     </label>
                 </div>
                 <div>
-                    <input type="submit" value="add Product" className="btn btn-block bg-black text-white mt-8" />
+                    <input type="submit" value="add Book" className="btn btn-block bg-black text-white mt-8" />
                 </div>
             </form>
         </div>
