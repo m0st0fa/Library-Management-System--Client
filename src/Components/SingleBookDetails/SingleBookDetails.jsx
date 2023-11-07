@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import { authContext } from "../../AuthProvider/AuthProvider";
@@ -6,7 +6,8 @@ import { useContext, useState } from "react";
 
 const SingleBookDetails = () => {
     const { user } = useContext(authContext);
-    const [book, setBook] = useState()
+    const [book, setBook] = useState();
+    console.log(book)
 
     const handleClickToaddData = (e) => {
         e.preventDefault();
@@ -28,13 +29,13 @@ const SingleBookDetails = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    const updateBookNumber = book - 1;
-                    fetch(`http://localhost:5001/Books/${id}`, {
-                        method: 'PATCH',
+                    const updatedQuantity = book - 1;
+                    fetch(`http://localhost:5001/update/${id}`, {
+                        method: 'PUT',
                         headers: {
                             'content-type': 'application/json'
                         },
-                        body: JSON.stringify({ Quantity: updateBookNumber })
+                        body: JSON.stringify({ Quantity: updatedQuantity })
                     })
                         .then(updateBook => {
                             if (updateBook.ok) {
@@ -44,10 +45,8 @@ const SingleBookDetails = () => {
                                     'success'
                                 );
                             }
-                            setBook(updateBookNumber)
+                            setBook(updatedQuantity);
                         })
-
-
                 }
             });
     };
