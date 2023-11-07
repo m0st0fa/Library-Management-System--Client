@@ -15,6 +15,7 @@ import GetAllBooks from './Components/AllBooks/GetAllBooks';
 import Login from './Components/Login/Login';
 import AuthProvider from './AuthProvider/AuthProvider';
 import Register from './Components/Login/Register';
+import SingleBorrowedBookInfo from './Components/SingleBookDetails/SingleBorrowedBookInfo';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
         element: <SingleBookDetails></SingleBookDetails>,
         loader: ({ params }) => fetch(`http://localhost:5001/details/${params.id}`)
 
+      },{
+        path:'/BorrowedBook',
+        element:<SingleBorrowedBookInfo></SingleBorrowedBookInfo>,
+        loader: () => fetch('http://localhost:5001/Borrowed')
       }
     ]
   },
