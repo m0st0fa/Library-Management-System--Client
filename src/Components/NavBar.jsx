@@ -15,6 +15,7 @@ const NavBar = () => {
             })
     }
     const Navlinks = <>
+    
     <li> <NavLink to='/'>Home</NavLink></li>
     <li> <NavLink to='/addBooks'>Add Book</NavLink></li>
     <li> <NavLink to='/allBooks'>All Books</NavLink></li>
@@ -46,6 +47,8 @@ const NavBar = () => {
             <div className="navbar-end">
                 {
                     user ? <div className="flex items-center gap-2">
+
+                        <img className="w-10  rounded-sm" src={user.photoURL} alt="" />
                         <h3 >{user.displayName}</h3>
                         <button onClick={handleSingOut} className="btn">Sign Out</button>
                     </div>
