@@ -17,6 +17,7 @@ import AuthProvider from './AuthProvider/AuthProvider';
 import Register from './Components/Login/Register';
 import SingleBorrowedBookInfo from './Components/SingleBookDetails/SingleBorrowedBookInfo';
 import AllBooksUpdate from './Components/AllBooks/AllBooksUpdate';
+import PrivateRoutes from './Components/PriviteRoutes/PrivateRoutes';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,37 +33,39 @@ const router = createBrowserRouter([
         element: <Login></Login>
       },
       {
-          path: '/register',
-          element:<Register></Register>
+        path: '/register',
+        element: <Register></Register>
       },
       {
         path: '/addBooks',
-        element: <AddBooks></AddBooks>
+        element: <PrivateRoutes>
+          <AddBooks></AddBooks>
+        </PrivateRoutes>
       },
       {
         path: '/allBooks',
-        element: <GetAllBooks></GetAllBooks>,
+        element: <PrivateRoutes><GetAllBooks></GetAllBooks>,</PrivateRoutes>,
         loader: () => fetch('http://localhost:5001/books')
       },
       {
-        path:'/update/:id',
-        element:<AllBooksUpdate></AllBooksUpdate>,
-        loader: ({params}) => fetch(`http://localhost:5001/update/${params.id}`)
+        path: '/update/:id',
+        element: <PrivateRoutes><AllBooksUpdate></AllBooksUpdate></PrivateRoutes>,
+        loader: ({ params }) => fetch(`http://localhost:5001/update/${params.id}`)
 
       },
       {
         path: '/Books/:Category',
-        element: <Books></Books>,
+        element:<PrivateRoutes> <Books></Books></PrivateRoutes>,
         loader: ({ params }) => fetch(`http://localhost:5001/books/${params.Category}`)
       },
       {
         path: '/details/:id',
-        element: <SingleBookDetails></SingleBookDetails>,
+        element:<PrivateRoutes> <SingleBookDetails></SingleBookDetails></PrivateRoutes>,
         loader: ({ params }) => fetch(`http://localhost:5001/details/${params.id}`)
 
-      },{
-        path:'/BorrowedBook',
-        element:<SingleBorrowedBookInfo></SingleBorrowedBookInfo>,
+      }, {
+        path: '/BorrowedBook',
+        element: <PrivateRoutes><SingleBorrowedBookInfo></SingleBorrowedBookInfo>,</PrivateRoutes>,
         loader: () => fetch('http://localhost:5001/Borrowed')
       }
     ]
@@ -72,7 +75,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <AuthProvider>
-          <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </AuthProvider>
   </React.StrictMode>,
 )

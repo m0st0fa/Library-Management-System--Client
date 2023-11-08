@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "title": "The Mystery of the Enchanted Library",
+      "author": "Alice Authorson",
+      "genre": "Mystery",
+      "published_year": 2022,
+      "copies_sold": 1200,
+      "rating": 4.5,
+      "price": 19.99,
+      "image": "https://i.ibb.co/3CGwpRx/0x0.webp"
+    },
+    {
+      "id": 2,
+      "title": "Fantasy Adventure Chronicles",
+      "author": "Bob Bookworm",
+      "genre": "Fantasy",
+      "published_year": 2023,
+      "copies_sold": 950,
+      "rating": 4.2,
+      "price": 24.99,
+      "image": "https://example.com/images/book2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Science Explorers: A Journey Through the Cosmos",
+      "author": "Eve Einstein",
+      "genre": "Science",
+      "published_year": 2021,
+      "copies_sold": 800,
+      "rating": 4.8,
+      "price": 29.99,
+      "image": "https://example.com/images/book3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Romance by the Riverside",
+      "author": "Lily Lovelace",
+      "genre": "Romance",
+      "published_year": 2022,
+      "copies_sold": 1500,
+      "rating": 4.6,
+      "price": 14.99,
+      "image": "https://example.com/images/book4.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Thrills and Chills: Tales of Suspense",
+      "author": "Sam Spooky",
+      "genre": "Thriller",
+      "published_year": 2023,
+      "copies_sold": 700,
+      "rating": 4.3,
+      "price": 22.99,
+      "image": "https://example.com/images/book5.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Historical Odyssey: A Journey Through Time",
+      "author": "Henry Historian",
+      "genre": "History",
+      "published_year": 2020,
+      "copies_sold": 1100,
+      "rating": 4.7,
+      "price": 17.99,
+      "image": "https://example.com/images/book6.jpg"
+    },
+    {
+      "id": 7,
+      "title": "The Secret Garden",
+      "author": "Frances Hodgson Burnett",
+      "genre": "Children's",
+      "published_year": 1911,
+      "copies_sold": 2500,
+      "rating": 4.9,
+      "price": 12.99,
+      "image": "https://example.com/images/book7.jpg"
+    },
+    {
+      "id": 8,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Classic",
+      "published_year": 1925,
+      "copies_sold": 1800,
+      "rating": 4.4,
+      "price": 15.99,
+      "image": "https://example.com/images/book8.jpg"
+    },
+    {
+      "id": 9,
+      "title": "The Hitchhiker's Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "genre": "Science Fiction",
+      "published_year": 1979,
+      "copies_sold": 1400,
+      "rating": 4.6,
+      "price": 20.99,
+      "image": "https://example.com/images/book9.jpg"
+    }
+  ]
+  
