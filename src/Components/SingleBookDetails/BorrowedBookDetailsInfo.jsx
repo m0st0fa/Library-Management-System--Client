@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 
+
 const BorrowedBookDetailsInfo = ({ item }) => {
-    const { name, image, Category, date } = item;
+    const { name, image, Category, date,} = item;
+   
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -14,7 +16,7 @@ const BorrowedBookDetailsInfo = ({ item }) => {
                     <p>Borrowed Date:{date}</p>
                     <div className="card-actions justify-between">
                         <div className="badge btn-accent badge-outline">Return Date</div>
-                        <div className="badge btn-accent badge-outline">Book Return </div>
+                        <button className="btn btn-outline btn-warning">Book Return</button>
                     </div>
                 </div>
             </div>

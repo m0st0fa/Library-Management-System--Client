@@ -5,9 +5,11 @@ import { authContext } from "../../AuthProvider/AuthProvider";
 import { useContext, useState } from "react";
 
 const SingleBookDetails = () => {
+    const details = useLoaderData();
+    const { _id, image, description, name, Quantity, Category, } = details;
     const { user } = useContext(authContext);
-    const [book, setBook] = useState();
-    console.log(book)
+    const [Book, setBook] = useState(Quantity);
+    console.log(Book)
 
     const handleClickToaddData = (e) => {
         e.preventDefault();
@@ -21,38 +23,41 @@ const SingleBookDetails = () => {
         fetch('http://localhost:5001/Borrowed', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+              'content-type': 'application/json'
             },
             body: JSON.stringify(newBorrowedBook)
-        })
+          })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    const updatedQuantity = book - 1;
-                    fetch(`http://localhost:5001/update/${id}`, {
-                        method: 'PUT',
-                        headers: {
-                            'content-type': 'application/json'
-                        },
-                        body: JSON.stringify({ Quantity: updatedQuantity })
-                    })
-                        .then(updateBook => {
-                            if (updateBook.ok) {
-                                Swal.fire(
-                                    'Well Done',
-                                    'You successfully added this Book to your Borrowed Book!',
-                                    'success'
-                                );
-                            }
-                            setBook(updatedQuantity);
-                        })
-                }
+              if (data.insertedId) {
+                const updatedQuantity = Book - 1;
+                fetch(`http://localhost:5001/update/${_id}`, {
+                  method: 'PUT',
+                  headers: {
+                    'content-type': 'application/json'
+                  },
+                  body: JSON.stringify({ Quantity: updatedQuantity })
+                })
+                  .then(data => {
+                    if (data.modifiedCount) {
+                      Swal.fire(
+                        'Good job!',
+                        'Borrow Book successfully',
+                        'success'
+                      );
+                    }
+                    setBook(updatedQuantity);
+                  })
+                  .catch(error => {
+                    console.error('Error updating book quantity:', error);
+                  });
+              }
+            })
+            .catch(error => {
+              console.error('Error adding borrowed book:', error);
             });
+          
     };
-
-    const details = useLoaderData();
-    const { image, description, name, Quantity, Category } = details;
 
     return (
         <div className="bg-gray-200">
@@ -60,9 +65,9 @@ const SingleBookDetails = () => {
                 <img src={image} className="w-1/2 h-96" alt="Product Image" />
                 <div>
                     <h1 className="text-5xl font-bold my-4">{name}</h1>
-                    <h1 className="text-3xl font-medium">Quantity of Book: {Quantity}</h1>
+                    <h1 className="text-3xl font-medium">Quantity of Book: {Book}</h1>
                     <p className="py-6">{description}</p>
-                    <button className="btn" onClick={() => document.getElementById('my_modal_5').showModal()}>Borrow</button>
+                    <button className="btn" onClick={() => document.getElementById('my_modal_5').showModal()} disabled={Book <= 0}>Borrow</button>
                     <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
                         <div className="modal-box">
                             <div className="form-control">

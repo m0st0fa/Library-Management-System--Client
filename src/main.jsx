@@ -16,6 +16,7 @@ import Login from './Components/Login/Login';
 import AuthProvider from './AuthProvider/AuthProvider';
 import Register from './Components/Login/Register';
 import SingleBorrowedBookInfo from './Components/SingleBookDetails/SingleBorrowedBookInfo';
+import AllBooksUpdate from './Components/AllBooks/AllBooksUpdate';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
         path: '/allBooks',
         element: <GetAllBooks></GetAllBooks>,
         loader: () => fetch('http://localhost:5001/books')
-
+      },
+      {
+        path:'/update/:id',
+        element:<AllBooksUpdate></AllBooksUpdate>,
+        loader: ({params}) => fetch(`http://localhost:5001/update/${params.id}`)
 
       },
       {
