@@ -11,9 +11,9 @@ const AllBooksDetails = ({ item }) => {
                 <figure><img className="w-96 h-96" src={image} alt="" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
-                    <h2>{Quantity}</h2>
+                    <h2 className="text-3xl font-medium text-amber-800"> Quantity:{Quantity}</h2>
                     <Link to={`/update/${_id}`}>
-                        <div className="btn btn-outline w-full btn-accent">
+                        <div className="btn w-full btn-accent">
                             <FaRegEdit />
                             <button>Update</button>
                         </div>

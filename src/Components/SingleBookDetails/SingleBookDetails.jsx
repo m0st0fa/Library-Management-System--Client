@@ -20,7 +20,7 @@ const SingleBookDetails = () => {
         const Category = formData.get("Category");
         const newBorrowedBook = { name, image, Category, date, user };
         console.log(newBorrowedBook);
-        fetch('http://localhost:5001/Borrowed', {
+        fetch('https://library-management-system-server-pi.vercel.app/Borrowed', {
             method: 'POST',
             headers: {
               'content-type': 'application/json'
@@ -31,7 +31,7 @@ const SingleBookDetails = () => {
             .then(data => {
               if (data.insertedId) {
                 const updatedQuantity = Book - 1;
-                fetch(`http://localhost:5001/update/${_id}`, {
+                fetch(`https://library-management-system-server-pi.vercel.app/update/${_id}`, {
                   method: 'PUT',
                   headers: {
                     'content-type': 'application/json'
