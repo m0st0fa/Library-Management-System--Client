@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+import { FaRegEdit } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const AllBooksDetails = ({ item }) => {
@@ -13,8 +13,12 @@ const AllBooksDetails = ({ item }) => {
                     <h2 className="card-title">{name}</h2>
                     <h2>{Quantity}</h2>
                     <Link to={`/update/${_id}`}>
-                        <button className="btn btn-secondary w-full">Update</button>
+                        <div className="btn btn-outline w-full btn-accent">
+                            <FaRegEdit />
+                            <button>Update</button>
+                        </div>
                     </Link>
+
                 </div>
             </div>
         </div>

@@ -13,7 +13,7 @@ const AddBooks = () => {
         const Category = form.Category.value
         const newProduct = { name, Author, image, Quantity, description, rating, Category }
         console.log(newProduct)
-        fetch('https://library-management-system-server-pi.vercel.app/books', {
+        fetch('http://localhost:5001/books', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ const GetAllBooks = () => {
     const AllBooks = useLoaderData()
     return (
         <div>
-            <div className=" grid grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {
                     AllBooks.map(item => <AllBooksDetails key={item._id} item={item}></AllBooksDetails>)
                 }

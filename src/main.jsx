@@ -45,29 +45,29 @@ const router = createBrowserRouter([
       {
         path: '/allBooks',
         element: <PrivateRoutes><GetAllBooks></GetAllBooks>,</PrivateRoutes>,
-        loader: () => fetch('https://library-management-system-server-pi.vercel.app/books')
+        loader: () => fetch('http://localhost:5001/books')
       },
       {
         path: '/update/:id',
         element: <PrivateRoutes><AllBooksUpdate></AllBooksUpdate></PrivateRoutes>,
-        loader: ({ params }) => fetch(`https://library-management-system-server-pi.vercel.app/update/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5001/update/${params.id}`)
 
       },
       {
         path: '/Books/:Category',
         element:<PrivateRoutes> <Books></Books></PrivateRoutes>,
-        loader: ({ params }) => fetch(`https://library-management-system-server-pi.vercel.app/books/${params.Category}`)
+        loader: ({ params }) => fetch(`http://localhost:5001/books/${params.Category}`)
       },
       {
         path: '/details/:id',
         element:<PrivateRoutes> <SingleBookDetails></SingleBookDetails></PrivateRoutes>,
-        loader: ({ params }) => fetch(`https://library-management-system-server-pi.vercel.app/details/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5001/details/${params.id}`)
 
       },
       {
         path: '/BorrowedBook',
         element: <PrivateRoutes><SingleBorrowedBookInfo></SingleBorrowedBookInfo>,</PrivateRoutes>,
-        loader: () => fetch('https://library-management-system-server-pi.vercel.app/Borrowed')
+        loader: () => fetch('http://localhost:5001/Borrowed')
       }
     ]
   },

@@ -19,7 +19,7 @@ const AllBooksUpdate = () => {
         const Category = form.Category.value
         const updateBook = { name, Author, image, Quantity, description, rating, Category }
         console.log(updateBook)
-        fetch(`https://library-management-system-server-pi.vercel.app/update/${_id}`, {
+        fetch(`http://localhost:5001/update/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

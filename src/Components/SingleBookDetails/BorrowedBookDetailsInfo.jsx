@@ -18,7 +18,7 @@ const BorrowedBookDetailsInfo = ({ item, setBorrowBook,borrowBook }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://library-management-system-server-pi.vercel.app/delete/${_id}`, {
+                fetch(`http://localhost:5001/delete/${_id}`, {
                     method: 'DELETE',
                 })
                     .then(res => res.json())
