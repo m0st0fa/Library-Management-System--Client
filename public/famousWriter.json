@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "J. K. Rowling",
+      "country": "United Kingdom",
+      "date_of_birth": "December 16, 1775",
+      "novels_written": 100,
+      "image": "https://i.ibb.co/R28jxHW/gettyimages-1061157246.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Stan Lee",
+      "country": "United States",
+      "date_of_birth": "November 30, 1835",
+      "novels_written": 250,
+      "image": "https://media.wired.com/photos/5be9d68a5d7c6a7b81d79e25/master/pass/StanLee-610719480.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Suomi Sen",
+      "country": "India",
+      "date_of_birth": "March 6, 1927",
+      "novels_written": 120,
+      "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS3gRojUTPeF1k6ehoi-iYuku0-D3sAhWSRKvVolpbB9cmGNpIo"
+    }
+  ]
+  

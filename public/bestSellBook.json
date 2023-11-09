@@ -2,13 +2,13 @@
     {
       "id": 1,
       "title": "The Mystery of the Enchanted Library",
-      "author": "Alice Authorson",
+      "author": "Alice Author",
       "genre": "Mystery",
       "published_year": 2022,
       "copies_sold": 1200,
       "rating": 4.5,
       "price": 19.99,
-      "image": "https://i.ibb.co/3CGwpRx/0x0.webp"
+      "image": "https://i.ibb.co/TY5mJGR/0-338510571.jpg"
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "copies_sold": 950,
       "rating": 4.2,
       "price": 24.99,
-      "image": "https://example.com/images/book2.jpg"
+      "image": "https://i.ibb.co/K0fVV7S/51xga-M36qo-L.jpg"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "copies_sold": 800,
       "rating": 4.8,
       "price": 29.99,
-      "image": "https://example.com/images/book3.jpg"
+      "image": "https://i.ibb.co/rb9k7mw/61121586.jpg"
     },
     {
       "id": 4,
@@ -41,7 +41,7 @@
       "copies_sold": 1500,
       "rating": 4.6,
       "price": 14.99,
-      "image": "https://example.com/images/book4.jpg"
+      "image": "https://i.ibb.co/z6JXzGf/bunblemaster-850.jpg"
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@
       "copies_sold": 700,
       "rating": 4.3,
       "price": 22.99,
-      "image": "https://example.com/images/book5.jpg"
+      "image": "https://i.ibb.co/n7GPVCy/093b6782f6acc81724ce0decd9095e1b.jpg"
     },
     {
       "id": 6,
@@ -63,7 +63,7 @@
       "copies_sold": 1100,
       "rating": 4.7,
       "price": 17.99,
-      "image": "https://example.com/images/book6.jpg"
+      "image": "https://i.ibb.co/023qLnT/c155j.jpg"
     },
     {
       "id": 7,
@@ -74,7 +74,7 @@
       "copies_sold": 2500,
       "rating": 4.9,
       "price": 12.99,
-      "image": "https://example.com/images/book7.jpg"
+      "image": "https://i.ibb.co/84nj7PC/images-q-tbn-ANd9-Gc-SS-Dy-EZeu-T3-Og-GMq-Fukcat-Ht-VOEJHUObw-usqp-CAU.jpg"
     },
     {
       "id": 8,
@@ -85,7 +85,7 @@
       "copies_sold": 1800,
       "rating": 4.4,
       "price": 15.99,
-      "image": "https://example.com/images/book8.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrkprUJxxK8K6qXrHB61foS6UjeE45h_g2UQ&usqp=CAU"
     },
     {
       "id": 9,
@@ -96,7 +96,7 @@
       "copies_sold": 1400,
       "rating": 4.6,
       "price": 20.99,
-      "image": "https://example.com/images/book9.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr_wOwfZBXnB0kUy2mq4rOR9fkntwwYUubzA&usqp=CAU"
     }
   ]
   
